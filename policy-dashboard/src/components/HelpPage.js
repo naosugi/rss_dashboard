@@ -8,13 +8,154 @@ import {
   QuestionCircleOutlined,
   SolutionOutlined, 
   UsergroupAddOutlined, 
-  SearchOutlined
+  SearchOutlined,
+  AreaChartOutlined,
+  LineChartOutlined,
+  PieChartOutlined
 } from '@ant-design/icons';
 
 const { Title, Paragraph, Text } = Typography;
 const { Step } = Steps;
 
-const HelpPage = () => {
+const NewHelpPage = () => {
+  return (
+    <div className="help-page" style={{ padding: '0 20px' }}>
+      <Typography>
+        <Title level={2}>納税者価値追跡ダッシュボード 使い方ガイド</Title>
+        <Paragraph>
+          このダッシュボードは日本の政策データを可視化し、「税金の価値を最大化しているか？」という核心的な問いに答えるためのツールです。
+          データ報告者（行政組織）と利用者（納税者）双方にとって価値あるバランスの取れた設計を目指しています。
+        </Paragraph>
+
+        <Divider />
+
+        <Title level={3}>改良版ダッシュボードの特徴</Title>
+        <Paragraph>
+          改良版ダッシュボードは、以下の4つの主要な問いに焦点を当て、より洞察に富んだ分析を提供します。
+        </Paragraph>
+
+        <Row gutter={[16, 16]}>
+          <Col xs={24} md={6}>
+            <Card title={<><AreaChartOutlined /> 投資と成果の関係性分析</>} style={{ height: '100%' }}>
+              <Paragraph>
+                <strong>主要問い:</strong> 各政策分野への投資はどのような成果を生み出しているか？
+              </Paragraph>
+              <ul>
+                <li>投資と成果の関係マップ</li>
+                <li>改善機会分析</li>
+                <li>データドリブンな洞察</li>
+              </ul>
+            </Card>
+          </Col>
+          <Col xs={24} md={6}>
+            <Card title={<><LineChartOutlined /> 効果発現プロセス分析</>} style={{ height: '100%' }}>
+              <Paragraph>
+                <strong>主要問い:</strong> 政策実施から成果創出までのプロセスはどのように進展しているか？
+              </Paragraph>
+              <ul>
+                <li>政策実施プロセス</li>
+                <li>分野別プロセス特性</li>
+                <li>プロセスの段階的分析</li>
+              </ul>
+            </Card>
+          </Col>
+          <Col xs={24} md={6}>
+            <Card title={<><BarChartOutlined /> 継続的改善の取り組み</>} style={{ height: '100%' }}>
+              <Paragraph>
+                <strong>主要問い:</strong> 政策評価に基づく改善サイクルはどのように機能しているか？
+              </Paragraph>
+              <ul>
+                <li>改善サイクル進捗状況</li>
+                <li>長期的取り組み事業</li>
+                <li>改善トレンド分析</li>
+              </ul>
+            </Card>
+          </Col>
+          <Col xs={24} md={6}>
+            <Card title={<><PieChartOutlined /> 予算執行プロセスの特性</>} style={{ height: '100%' }}>
+              <Paragraph>
+                <strong>主要問い:</strong> 予算はどのような方法で執行されているか？
+              </Paragraph>
+              <ul>
+                <li>契約方式の特性</li>
+                <li>予算執行パターン</li>
+                <li>透明性指標</li>
+              </ul>
+            </Card>
+          </Col>
+        </Row>
+
+        <Divider />
+
+        <Title level={3}>デザイン原則</Title>
+        <Row gutter={[16, 16]}>
+          <Col xs={24} md={6}>
+            <Card title="中立的な表現">
+              <Paragraph>
+                評価を含む表現（「低パフォーマンス」「非効率」など）を避け、中立的な表現を使用しています。「高/低」「良い/悪い」の二項対立的表現より、「平均との差異」「特性の違い」として表現します。
+              </Paragraph>
+            </Card>
+          </Col>
+          <Col xs={24} md={6}>
+            <Card title="文脈の提供">
+              <Paragraph>
+                単純な数値の表示だけでなく、比較基準や背景情報を伴わせて表示します。例えば、単に「達成率65%」ではなく「分野平均が70%である中での達成率65%」と文脈化します。
+              </Paragraph>
+            </Card>
+          </Col>
+          <Col xs={24} md={6}>
+            <Card title="セミ・ダイナミックな洞察">
+              <Paragraph>
+                データの状態に応じて、複数のテンプレートから適切なものを選択し表示します。フィルター（府省庁、年度、経費区分）変更時に洞察テキストを更新します。
+              </Paragraph>
+            </Card>
+          </Col>
+          <Col xs={24} md={6}>
+            <Card title="バランスの取れた視点">
+              <Paragraph>
+                データ報告者（行政組織）と利用者（納税者）双方にとって有益な情報を提供します。政策の特性を適切に示しながら、改善機会も明示しています。
+              </Paragraph>
+            </Card>
+          </Col>
+        </Row>
+
+        <Divider />
+
+        <Title level={3}>使い方</Title>
+        <Paragraph>
+          納税者価値追跡ダッシュボードの使い方は以下の通りです。
+        </Paragraph>
+
+        <Steps direction="vertical" current={-1}>
+          <Step title="版の切り替え" description="画面上部の「元の版を表示」ボタンをクリックすると、オリジナル版と改良版を切り替えることができます。" />
+          <Step title="ダッシュボードの選択" description="左側メニューから分析したい視点（投資と成果、プロセス分析など）を選択します。" />
+          <Step title="フィルターの適用" description="府省庁フィルターを使用して、特定の組織に焦点を当てた分析が可能です。" />
+          <Step title="データの解釈" description="グラフや表の上にカーソルを置くと、詳細情報が表示されます。データからの洞察セクションで重要なポイントを確認できます。" />
+        </Steps>
+
+        <Divider />
+        
+        <Title level={3}>データソースについて</Title>
+        <Paragraph>
+          このダッシュボードは、2024年度の行政事業レビューのデータを基にしています。データは<a href="https://rssystem.go.jp/top" target="_blank" rel="noopener noreferrer">行政事業レビュー見える化サイト</a>から入手したCSVファイルから集計・処理されています：
+        </Paragraph>
+        <ul>
+          <li><Tag color="blue">1-2_RS_2024_基本情報_事業概要等.csv</Tag> 基本情報・事業概要等</li>
+          <li><Tag color="green">3-1_RS_2024_効果発現経路_目標・実績.csv</Tag> 効果発現経路・目標・実績</li>
+          <li><Tag color="cyan">3-2_RS_2024_効果発現経路_目標のつながり.csv</Tag> 効果発現経路・目標のつながり</li>
+          <li><Tag color="orange">4-1_RS_2024_点検・評価.csv</Tag> 点検・評価</li>
+          <li><Tag color="gold">5-1_RS_2024_支出先_支出情報.csv</Tag> 支出先・支出情報</li>
+        </ul>
+        <Paragraph>
+          すべてのデータは前処理され、パフォーマンスを最適化するためJSONとして保存されています。各ダッシュボードは、事前に集計された分析データを使用して高速な応答性を実現しています。
+        </Paragraph>
+      </Typography>
+    </div>
+  );
+};
+
+// オリジナルのヘルプページ
+const OriginalHelpPage = () => {
   return (
     <div className="help-page" style={{ padding: '0 20px' }}>
       <Typography>
@@ -183,40 +324,24 @@ const HelpPage = () => {
           <li><Tag color="orange">レビュー評価</Tag> 「抜本的改善」評価を受けた事業のみを表示</li>
           <li><Tag color="red">組み合わせ</Tag> 「経済産業省の新規事業のうち、一部改善が必要とされるもの」など</li>
         </ul>
-
-        <Divider />
-        
-        <Title level={3}>データソースについて</Title>
-        <Paragraph>
-          このダッシュボードは、2024年度の行政事業レビューのデータを基にしています。データは<a href="https://rssystem.go.jp/top" target="_blank" rel="noopener noreferrer">行政事業レビュー見える化サイト</a>から入手したCSVファイルから集計・処理されています：
-        </Paragraph>
-        <ul>
-          <li>基本情報・事業概要等</li>
-          <li>効果発現経路・目標・実績</li>
-          <li>効果発現経路・目標のつながり</li>
-          <li>点検・評価</li>
-          <li>支出先・支出情報</li>
-        </ul>
-        <Paragraph>
-          すべてのデータは前処理され、パフォーマンスを最適化するためJSONとして保存されています。
-        </Paragraph>
-        
-        <Title level={4}>行政事業レビューとは</Title>
-        <Paragraph>
-          行政事業レビューとは、各府省庁が、予算や基金を用いて行う原則すべての事業を、毎年度、自ら点検し、その点検結果を公表する取組です。
-        </Paragraph>
-        <Paragraph>
-          EBPM(Evidence-Based Policy Making: エビデンスに基づく政策立案)の手法等を用いて、事業の目的・課題を踏まえて成果指標を設定し、外部の視点も活用して点検を行います。
-        </Paragraph>
-        <Paragraph>
-          点検結果は翌年度の予算要求や事業の執行等に反映し、事業の効果的・効率的な実施につなげます。
-        </Paragraph>
-        <Paragraph>
-          <strong>EBPM（エビデンスに基づく政策立案）とは</strong>：①政策目的、②その目的達成のために効果的な政策手段、③政策手段と目的の論理的なつながり（ロジック）を明確にし、さらに、④このつながりの裏付けとなるデータ等のエビデンス（根拠）を可能な限り求めることで、政策立案・実施・評価を実証的なものとし、政策の実効性や効率性を高めていく手法。
-        </Paragraph>
       </Typography>
     </div>
   );
+};
+
+// コンポーネントのエクスポート
+const HelpPage = () => {
+  const [helpMode, setHelpMode] = React.useState('improved');
+  
+  // localStorageからモードを読み込む
+  React.useEffect(() => {
+    const savedMode = localStorage.getItem('dashboardMode');
+    if (savedMode) {
+      setHelpMode(savedMode);
+    }
+  }, []);
+  
+  return helpMode === 'original' ? <OriginalHelpPage /> : <NewHelpPage />;
 };
 
 export default HelpPage;

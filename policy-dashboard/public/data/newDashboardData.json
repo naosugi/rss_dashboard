@@ -1,0 +1,430 @@
+{
+  "investmentOutcome": {
+    "scatterData": [
+      {
+        "id": "内閣府",
+        "data": [
+          {
+            "x": 125000000,
+            "y": 78.2,
+            "id": "project-001",
+            "name": "デジタル社会推進事業",
+            "ministry": "内閣府",
+            "field": "IT基盤整備",
+            "size": 3
+          },
+          {
+            "x": 85000000,
+            "y": 65.8,
+            "id": "project-002",
+            "name": "地方創生推進事業",
+            "ministry": "内閣府",
+            "field": "地方創生",
+            "size": 2
+          }
+        ]
+      },
+      {
+        "id": "総務省",
+        "data": [
+          {
+            "x": 175000000,
+            "y": 82.5,
+            "id": "project-003",
+            "name": "通信インフラ整備",
+            "ministry": "総務省",
+            "field": "情報通信",
+            "size": 4
+          },
+          {
+            "x": 65000000,
+            "y": 91.3,
+            "id": "project-004",
+            "name": "電波利用促進事業",
+            "ministry": "総務省",
+            "field": "情報通信",
+            "size": 2
+          }
+        ]
+      },
+      {
+        "id": "経済産業省",
+        "data": [
+          {
+            "x": 235000000,
+            "y": 76.4,
+            "id": "project-005",
+            "name": "中小企業成長支援",
+            "ministry": "経済産業省",
+            "field": "産業振興",
+            "size": 5
+          },
+          {
+            "x": 185000000,
+            "y": 68.9,
+            "id": "project-006",
+            "name": "エネルギー転換推進",
+            "ministry": "経済産業省",
+            "field": "エネルギー",
+            "size": 4
+          }
+        ]
+      },
+      {
+        "id": "国土交通省",
+        "data": [
+          {
+            "x": 320000000,
+            "y": 58.7,
+            "id": "project-007",
+            "name": "道路インフラ整備",
+            "ministry": "国土交通省",
+            "field": "インフラ",
+            "size": 7
+          },
+          {
+            "x": 280000000,
+            "y": 62.5,
+            "id": "project-008",
+            "name": "公共交通システム改善",
+            "ministry": "国土交通省",
+            "field": "交通",
+            "size": 6
+          }
+        ]
+      },
+      {
+        "id": "文部科学省",
+        "data": [
+          {
+            "x": 145000000,
+            "y": 84.1,
+            "id": "project-009",
+            "name": "研究開発力強化事業",
+            "ministry": "文部科学省",
+            "field": "研究開発",
+            "size": 3
+          },
+          {
+            "x": 95000000,
+            "y": 79.3,
+            "id": "project-010",
+            "name": "教育ICT環境整備",
+            "ministry": "文部科学省",
+            "field": "教育",
+            "size": 2
+          }
+        ]
+      }
+    ],
+    "improvementOpportunities": [
+      {
+        "key": 0,
+        "field": "インフラ",
+        "ministry": "国土交通省",
+        "budget": 320000000,
+        "achievementRate": 58.7,
+        "nextSteps": "PDCAサイクルの強化と目標設定の見直し"
+      },
+      {
+        "key": 1,
+        "field": "交通",
+        "ministry": "国土交通省",
+        "budget": 280000000,
+        "achievementRate": 62.5,
+        "nextSteps": "進捗管理体制の改善と定期的なモニタリング"
+      },
+      {
+        "key": 2,
+        "field": "産業振興",
+        "ministry": "経済産業省",
+        "budget": 235000000,
+        "achievementRate": 76.4,
+        "nextSteps": "好事例の横展開と成果指標の拡充"
+      },
+      {
+        "key": 3,
+        "field": "エネルギー",
+        "ministry": "経済産業省",
+        "budget": 185000000,
+        "achievementRate": 68.9,
+        "nextSteps": "民間との連携強化と実証実験の拡大"
+      },
+      {
+        "key": 4,
+        "field": "情報通信",
+        "ministry": "総務省",
+        "budget": 175000000,
+        "achievementRate": 82.5,
+        "nextSteps": "技術革新に対応した目標更新と人材育成"
+      }
+    ],
+    "averages": {
+      "budget": 171000000,
+      "performance": 74.82
+    }
+  },
+  "processAnalysis": {
+    "processData": [
+      {
+        "stage": "アクティビティ実施率",
+        "value": 85.3,
+        "color": "#2C699A"
+      },
+      {
+        "stage": "アウトプット達成状況",
+        "value": 72.8,
+        "color": "#0E86D4"
+      },
+      {
+        "stage": "アウトカム進捗状況",
+        "value": 61.4,
+        "color": "#5ADBFF"
+      }
+    ],
+    "fieldProcessData": [
+      {
+        "field": "IT基盤整備",
+        "activityRate": 88.2,
+        "outputRate": 79.5,
+        "outcomeRate": 72.3,
+        "count": 8
+      },
+      {
+        "field": "地方創生",
+        "activityRate": 82.7,
+        "outputRate": 68.4,
+        "outcomeRate": 55.6,
+        "count": 12
+      },
+      {
+        "field": "情報通信",
+        "activityRate": 91.3,
+        "outputRate": 83.7,
+        "outcomeRate": 74.1,
+        "count": 9
+      },
+      {
+        "field": "産業振興",
+        "activityRate": 85.9,
+        "outputRate": 77.2,
+        "outcomeRate": 69.5,
+        "count": 15
+      },
+      {
+        "field": "エネルギー",
+        "activityRate": 84.1,
+        "outputRate": 72.6,
+        "outcomeRate": 62.8,
+        "count": 7
+      },
+      {
+        "field": "インフラ",
+        "activityRate": 78.5,
+        "outputRate": 65.3,
+        "outcomeRate": 52.1,
+        "count": 14
+      },
+      {
+        "field": "交通",
+        "activityRate": 81.9,
+        "outputRate": 69.8,
+        "outcomeRate": 58.2,
+        "count": 10
+      },
+      {
+        "field": "研究開発",
+        "activityRate": 89.7,
+        "outputRate": 75.3,
+        "outcomeRate": 61.8,
+        "count": 6
+      }
+    ]
+  },
+  "improvementCycle": {
+    "improvementData": [
+      {
+        "ministry": "内閣府",
+        "改善提案数": 32,
+        "実施済改善数": 24
+      },
+      {
+        "ministry": "総務省",
+        "改善提案数": 45,
+        "実施済改善数": 31
+      },
+      {
+        "ministry": "経済産業省",
+        "改善提案数": 58,
+        "実施済改善数": 42
+      },
+      {
+        "ministry": "国土交通省",
+        "改善提案数": 63,
+        "実施済改善数": 39
+      },
+      {
+        "ministry": "文部科学省",
+        "改善提案数": 41,
+        "実施済改善数": 33
+      },
+      {
+        "ministry": "厚生労働省",
+        "改善提案数": 52,
+        "実施済改善数": 37
+      }
+    ],
+    "trendData": [
+      {
+        "id": "改善サイクル成熟度",
+        "data": [
+          {
+            "x": "2021",
+            "y": 62.4
+          },
+          {
+            "x": "2022",
+            "y": 68.7
+          },
+          {
+            "x": "2023",
+            "y": 73.2
+          },
+          {
+            "x": "2024",
+            "y": 78.5
+          }
+        ]
+      }
+    ],
+    "longTermProjects": [
+      {
+        "key": 0,
+        "name": "地方創生推進交付金事業",
+        "ministry": "内閣府",
+        "duration": 6,
+        "totalBudget": 450000000,
+        "progress": "順調に進捗中",
+        "futurePlan": "自立的好循環の形成に向けた支援の継続"
+      },
+      {
+        "key": 1,
+        "name": "Society 5.0実現推進事業",
+        "ministry": "内閣府",
+        "duration": 5,
+        "totalBudget": 380000000,
+        "progress": "一部課題があるが進捗中",
+        "futurePlan": "分野間データ連携の強化と人材育成の加速"
+      },
+      {
+        "key": 2,
+        "name": "カーボンニュートラル技術開発",
+        "ministry": "経済産業省",
+        "duration": 5,
+        "totalBudget": 520000000,
+        "progress": "目標に向けて進捗中",
+        "futurePlan": "民間投資の誘発と実証プロジェクトの拡大"
+      },
+      {
+        "key": 3,
+        "name": "国土強靭化推進事業",
+        "ministry": "国土交通省",
+        "duration": 7,
+        "totalBudget": 650000000,
+        "progress": "計画通り進捗",
+        "futurePlan": "老朽インフラの更新と防災・減災対策の強化"
+      },
+      {
+        "key": 4,
+        "name": "次世代放送・通信融合技術開発",
+        "ministry": "総務省",
+        "duration": 4,
+        "totalBudget": 285000000,
+        "progress": "技術開発段階",
+        "futurePlan": "社会実装に向けた規制改革と標準化推進"
+      }
+    ],
+    "improvementChange": 5.3,
+    "reviewCaseCount": 42
+  },
+  "budgetExecution": {
+    "contractMethodData": [
+      {
+        "ministry": "内閣府",
+        "一般競争入札": 58.3,
+        "指名競争入札": 12.5,
+        "随意契約": 26.7,
+        "その他": 2.5
+      },
+      {
+        "ministry": "総務省",
+        "一般競争入札": 67.2,
+        "指名競争入札": 8.3,
+        "随意契約": 22.1,
+        "その他": 2.4
+      },
+      {
+        "ministry": "経済産業省",
+        "一般競争入札": 63.5,
+        "指名競争入札": 11.2,
+        "随意契約": 23.4,
+        "その他": 1.9
+      },
+      {
+        "ministry": "国土交通省",
+        "一般競争入札": 72.4,
+        "指名競争入札": 15.7,
+        "随意契約": 10.5,
+        "その他": 1.4
+      },
+      {
+        "ministry": "文部科学省",
+        "一般競争入札": 51.8,
+        "指名競争入札": 9.3,
+        "随意契約": 35.6,
+        "その他": 3.3
+      },
+      {
+        "ministry": "厚生労働省",
+        "一般競争入札": 62.1,
+        "指名競争入札": 10.8,
+        "随意契約": 24.9,
+        "その他": 2.2
+      },
+      {
+        "ministry": "防衛省",
+        "一般競争入札": 48.5,
+        "指名競争入札": 18.3,
+        "随意契約": 31.5,
+        "その他": 1.7
+      }
+    ],
+    "competitiveRate": 65.3,
+    "specializedFields": [
+      {
+        "field": "研究開発",
+        "contractType": "随意契約",
+        "rate": 68.2,
+        "sampleSize": 28
+      },
+      {
+        "field": "インフラ",
+        "contractType": "一般競争入札",
+        "rate": 82.5,
+        "sampleSize": 45
+      },
+      {
+        "field": "情報通信",
+        "contractType": "一般競争入札",
+        "rate": 71.6,
+        "sampleSize": 32
+      }
+    ],
+    "contractMethodChanges": {
+      "competitiveBidding": 3.2,
+      "nominatedBidding": -1.5,
+      "negotiatedContract": -1.8,
+      "others": 0.1
+    }
+  }
+}

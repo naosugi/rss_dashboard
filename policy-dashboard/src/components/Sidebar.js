@@ -5,35 +5,54 @@ import { FilterOutlined } from '@ant-design/icons';
 const { Title } = Typography;
 const { Option } = Select;
 
-const Sidebar = ({ data, filters, onFilterChange }) => {
+const Sidebar = ({ data = {}, filters = {
+  ministries: [], 
+  projectTypes: [''], 
+  expenseTypes: [''], 
+  budgetRange: [0, 50000], 
+  reviewTypes: []
+}, onFilterChange = () => {} }) => {
   const [ministryOptions, setMinistryOptions] = useState([]);
   const [projectTypeOptions, setProjectTypeOptions] = useState([]);
   const [expenseTypeOptions, setExpenseTypeOptions] = useState([]);
   const [reviewTypeOptions, setReviewTypeOptions] = useState([]);
 
   useEffect(() => {
-    if (data.ministryData && data.ministryData.length > 0) {
-      // 府省庁オプションの生成
-      const ministries = data.ministryData.map(item => item.ministry);
+    // Safely handle data access with defaults and null checks
+    const safeData = data || {};
+    
+    // 府省庁オプションの生成
+    if (safeData.ministryData && Array.isArray(safeData.ministryData) && safeData.ministryData.length > 0) {
+      const ministries = safeData.ministryData.map(item => item.ministry).filter(Boolean);
       setMinistryOptions(ministries);
+    } else {
+      setMinistryOptions([]);
     }
 
-    if (data.projectTypeData && data.projectTypeData.length > 0) {
-      // 事業区分オプションの生成
-      const projectTypes = data.projectTypeData.map(item => item.type);
+    // 事業区分オプションの生成
+    if (safeData.projectTypeData && Array.isArray(safeData.projectTypeData) && safeData.projectTypeData.length > 0) {
+      const projectTypes = safeData.projectTypeData.map(item => item.type).filter(Boolean);
       setProjectTypeOptions(projectTypes);
+    } else {
+      setProjectTypeOptions([]);
     }
 
-    if (data.expenseTypeData && data.expenseTypeData.length > 0) {
-      // 主要経費オプションの生成
-      const expenseTypes = data.expenseTypeData.map(item => item.expense);
+    // 主要経費オプションの生成
+    if (safeData.expenseTypeData && Array.isArray(safeData.expenseTypeData) && safeData.expenseTypeData.length > 0) {
+      const expenseTypes = safeData.expenseTypeData.map(item => item.expense).filter(Boolean);
       setExpenseTypeOptions(expenseTypes);
+    } else {
+      setExpenseTypeOptions([]);
     }
 
-    if (data.reviewMetrics && data.reviewMetrics.reviewDistribution && data.reviewMetrics.reviewDistribution.length > 0) {
-      // レビュー評価オプションの生成
-      const reviewTypes = data.reviewMetrics.reviewDistribution.map(item => item.review);
+    // レビュー評価オプションの生成
+    if (safeData.reviewMetrics && safeData.reviewMetrics.reviewDistribution && 
+        Array.isArray(safeData.reviewMetrics.reviewDistribution) && 
+        safeData.reviewMetrics.reviewDistribution.length > 0) {
+      const reviewTypes = safeData.reviewMetrics.reviewDistribution.map(item => item.review).filter(Boolean);
       setReviewTypeOptions(reviewTypes);
+    } else {
+      setReviewTypeOptions([]);
     }
   }, [data]);
 
