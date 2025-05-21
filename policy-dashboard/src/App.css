@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #1890ff;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+.kpi-row .ant-card {
+  border-top: 4px solid #1890ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+.filter-section {
+  margin-bottom: 16px;
+}
+
+.filter-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.ant-table-row:hover {
+  cursor: pointer;
+}
+
+/* 円グラフ用カスタムスタイル */
+.recharts-pie-label-text {
+  font-weight: 600;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+  
+  .ant-layout {
+    flex-direction: column !important;
+  }
+}

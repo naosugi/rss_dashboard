@@ -1,0 +1,62 @@
+[
+  {
+    "ministry": "文部科学省",
+    "count": 1245,
+    "percentage": "20.9"
+  },
+  {
+    "ministry": "厚生労働省",
+    "count": 987,
+    "percentage": "16.6"
+  },
+  {
+    "ministry": "経済産業省",
+    "count": 743,
+    "percentage": "12.5"
+  },
+  {
+    "ministry": "農林水産省",
+    "count": 632,
+    "percentage": "10.6"
+  },
+  {
+    "ministry": "国土交通省",
+    "count": 578,
+    "percentage": "9.7"
+  },
+  {
+    "ministry": "総務省",
+    "count": 432,
+    "percentage": "7.3"
+  },
+  {
+    "ministry": "環境省",
+    "count": 345,
+    "percentage": "5.8"
+  },
+  {
+    "ministry": "内閣府",
+    "count": 256,
+    "percentage": "4.3"
+  },
+  {
+    "ministry": "財務省",
+    "count": 234,
+    "percentage": "3.9"
+  },
+  {
+    "ministry": "外務省",
+    "count": 198,
+    "percentage": "3.3"
+  },
+  {
+    "ministry": "防衛省",
+    "count": 156,
+    "percentage": "2.6"
+  },
+  {
+    "ministry": "法務省",
+    "count": 142,
+    "percentage": "2.4"
+  }
+]
