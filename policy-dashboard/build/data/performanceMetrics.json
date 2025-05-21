@@ -1,0 +1,78 @@
+{
+  "typeDistribution": [
+    {
+      "type": "アウトプット",
+      "count": 24567
+    },
+    {
+      "type": "アクティビティ",
+      "count": 18976
+    },
+    {
+      "type": "アウトカム",
+      "count": 12587
+    }
+  ],
+  "projectPerformance": [
+    {
+      "projectId": 3245,
+      "achievement": "132.5",
+      "projectName": "国際的な人材育成プログラム",
+      "ministry": "文部科学省"
+    },
+    {
+      "projectId": 1872,
+      "achievement": "124.3",
+      "projectName": "デジタル技術による地域活性化支援事業",
+      "ministry": "総務省"
+    },
+    {
+      "projectId": 4567,
+      "achievement": "115.8",
+      "projectName": "先端医療技術研究開発プロジェクト",
+      "ministry": "厚生労働省"
+    },
+    {
+      "projectId": 2345,
+      "achievement": "112.4",
+      "projectName": "次世代エネルギー技術開発事業",
+      "ministry": "経済産業省"
+    },
+    {
+      "projectId": 5678,
+      "achievement": "107.6",
+      "projectName": "食品安全高度化プログラム",
+      "ministry": "農林水産省"
+    },
+    {
+      "projectId": 987,
+      "achievement": "45.2",
+      "projectName": "地域文化発信支援事業",
+      "ministry": "文部科学省"
+    },
+    {
+      "projectId": 654,
+      "achievement": "42.8",
+      "projectName": "後進地域交通インフラ整備事業",
+      "ministry": "国土交通省"
+    },
+    {
+      "projectId": 543,
+      "achievement": "38.5",
+      "projectName": "小規模事業者販路開拓支援",
+      "ministry": "経済産業省"
+    },
+    {
+      "projectId": 432,
+      "achievement": "31.7",
+      "projectName": "高齢者デジタル活用支援事業",
+      "ministry": "厚生労働省"
+    },
+    {
+      "projectId": 321,
+      "achievement": "25.9",
+      "projectName": "遊休農地活用推進事業",
+      "ministry": "農林水産省"
+    }
+  ]
+}

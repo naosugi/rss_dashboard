@@ -1,0 +1,27 @@
+[
+  {
+    "method": "一般競争契約",
+    "count": 87654,
+    "percentage": "45.2"
+  },
+  {
+    "method": "随意契約",
+    "count": 65432,
+    "percentage": "33.7"
+  },
+  {
+    "method": "指名競争契約",
+    "count": 24321,
+    "percentage": "12.5"
+  },
+  {
+    "method": "企画競争",
+    "count": 12345,
+    "percentage": "6.4"
+  },
+  {
+    "method": "その他",
+    "count": 4381,
+    "percentage": "2.2"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "expense": "その他の事項経費",
+    "count": 2345,
+    "percentage": "39.4"
+  },
+  {
+    "expense": "科学技術振興費",
+    "count": 1123,
+    "percentage": "18.9"
+  },
+  {
+    "expense": "社会保障費",
+    "count": 865,
+    "percentage": "14.5"
+  },
+  {
+    "expense": "公共事業関係費",
+    "count": 587,
+    "percentage": "9.9"
+  },
+  {
+    "expense": "経済安全保障推進費",
+    "count": 354,
+    "percentage": "5.9"
+  },
+  {
+    "expense": "地方財政対策費",
+    "count": 234,
+    "percentage": "3.9"
+  },
+  {
+    "expense": "防衛関係費",
+    "count": 156,
+    "percentage": "2.6"
+  },
+  {
+    "expense": "食料安全保障関係費",
+    "count": 132,
+    "percentage": "2.2"
+  },
+  {
+    "expense": "中小企業対策費",
+    "count": 98,
+    "percentage": "1.6"
+  },
+  {
+    "expense": "教育振興助成費",
+    "count": 54,
+    "percentage": "0.9"
+  }
+]

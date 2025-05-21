@@ -1,0 +1,161 @@
+{
+  "typeDistribution": [
+    {
+      "type": "株式会社",
+      "amount": 152345678901,
+      "percentage": "42.8"
+    },
+    {
+      "type": "特殊法人",
+      "amount": 87654321098,
+      "percentage": "24.6"
+    },
+    {
+      "type": "一般社団法人",
+      "amount": 43210987654,
+      "percentage": "12.1"
+    },
+    {
+      "type": "地方公共団体",
+      "amount": 32109876543,
+      "percentage": "9.0"
+    },
+    {
+      "type": "学校法人",
+      "amount": 21098765432,
+      "percentage": "5.9"
+    },
+    {
+      "type": "国立大学法人",
+      "amount": 10987654321,
+      "percentage": "3.1"
+    },
+    {
+      "type": "その他",
+      "amount": 9876543210,
+      "percentage": "2.5"
+    }
+  ],
+  "topRecipients": [
+    {
+      "name": "大手建設株式会社",
+      "amount": 12345678901,
+      "formattedAmount": "12,345,678,901",
+      "type": "株式会社"
+    },
+    {
+      "name": "国立研究開発法人科学技術振興機構",
+      "amount": 9876543210,
+      "formattedAmount": "9,876,543,210",
+      "type": "特殊法人"
+    },
+    {
+      "name": "大手電機メーカー株式会社",
+      "amount": 8765432109,
+      "formattedAmount": "8,765,432,109",
+      "type": "株式会社"
+    },
+    {
+      "name": "全国中小企業団体中央会",
+      "amount": 7654321098,
+      "formattedAmount": "7,654,321,098",
+      "type": "一般社団法人"
+    },
+    {
+      "name": "大手自動車メーカー株式会社",
+      "amount": 6543210987,
+      "formattedAmount": "6,543,210,987",
+      "type": "株式会社"
+    },
+    {
+      "name": "日本商工会議所",
+      "amount": 5432109876,
+      "formattedAmount": "5,432,109,876",
+      "type": "一般社団法人"
+    },
+    {
+      "name": "国立研究開発法人産業技術総合研究所",
+      "amount": 4321098765,
+      "formattedAmount": "4,321,098,765",
+      "type": "特殊法人"
+    },
+    {
+      "name": "○○県",
+      "amount": 3210987654,
+      "formattedAmount": "3,210,987,654",
+      "type": "地方公共団体"
+    },
+    {
+      "name": "△△大学",
+      "amount": 2109876543,
+      "formattedAmount": "2,109,876,543",
+      "type": "学校法人"
+    },
+    {
+      "name": "大手IT企業株式会社",
+      "amount": 1987654321,
+      "formattedAmount": "1,987,654,321",
+      "type": "株式会社"
+    },
+    {
+      "name": "一般財団法人医療イノベーション推進機構",
+      "amount": 1876543210,
+      "formattedAmount": "1,876,543,210",
+      "type": "一般財団法人"
+    },
+    {
+      "name": "××市",
+      "amount": 1765432109,
+      "formattedAmount": "1,765,432,109",
+      "type": "地方公共団体"
+    },
+    {
+      "name": "大手通信企業株式会社",
+      "amount": 1654321098,
+      "formattedAmount": "1,654,321,098",
+      "type": "株式会社"
+    },
+    {
+      "name": "国立大学法人□□大学",
+      "amount": 1543210987,
+      "formattedAmount": "1,543,210,987",
+      "type": "国立大学法人"
+    },
+    {
+      "name": "公益社団法人経済団体連合会",
+      "amount": 1432109876,
+      "formattedAmount": "1,432,109,876",
+      "type": "公益社団法人"
+    },
+    {
+      "name": "大手商社株式会社",
+      "amount": 1321098765,
+      "formattedAmount": "1,321,098,765",
+      "type": "株式会社"
+    },
+    {
+      "name": "中堅建設会社株式会社",
+      "amount": 1210987654,
+      "formattedAmount": "1,210,987,654",
+      "type": "株式会社"
+    },
+    {
+      "name": "国立研究開発法人医療研究開発機構",
+      "amount": 1109876543,
+      "formattedAmount": "1,109,876,543",
+      "type": "特殊法人"
+    },
+    {
+      "name": "エネルギー関連企業株式会社",
+      "amount": 1098765432,
+      "formattedAmount": "1,098,765,432",
+      "type": "株式会社"
+    },
+    {
+      "name": "◇◇財団",
+      "amount": 987654321,
+      "formattedAmount": "987,654,321",
+      "type": "一般財団法人"
+    }
+  ]
+}
