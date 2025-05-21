@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Layout, Menu, Typography } from 'antd';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
@@ -19,11 +19,77 @@ const { Title, Text } = Typography;
 
 function App() {
   const [mode, setMode] = useState('improved'); // 'original' or 'improved'
+  const [dashboardData, setDashboardData] = useState({
+    summary: null,
+    ministryData: null,
+    projectTypeData: null,
+    expenseTypeData: null
+  });
 
   // Toggle between original and improved dashboard
   const toggleDashboardMode = () => {
-    setMode(prevMode => prevMode === 'original' ? 'improved' : 'original');
+    const newMode = mode === 'original' ? 'improved' : 'original';
+    setMode(newMode);
+    localStorage.setItem('dashboardMode', newMode);
   };
+
+  // Load data for original dashboard
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        // Create an array of fetch promises with fallback error handling
+        const fetchWithFallback = async (url, defaultValue = {}) => {
+          try {
+            const response = await fetch(url);
+            if (!response.ok) {
+              console.warn(`Failed to load ${url}, using default value`);
+              return defaultValue;
+            }
+            return await response.json();
+          } catch (error) {
+            console.warn(`Error loading ${url}:`, error);
+            return defaultValue;
+          }
+        };
+
+        // Load all data with fallbacks
+        const [summary, ministryData, projectTypeData, expenseTypeData] = await Promise.all([
+          fetchWithFallback('./data/summary.json', { totalProjects: 0, newProjects: 0, endingProjects: 0, improvementProjects: 0 }),
+          fetchWithFallback('./data/ministryData.json', []),
+          fetchWithFallback('./data/projectTypeData.json', []),
+          fetchWithFallback('./data/expenseTypeData.json', [])
+        ]);
+        
+        setDashboardData({
+          summary,
+          ministryData,
+          projectTypeData,
+          expenseTypeData
+        });
+      } catch (error) {
+        console.error("Error loading dashboard data:", error);
+        // Set default empty data on failure
+        setDashboardData({
+          summary: { totalProjects: 0, newProjects: 0, endingProjects: 0, improvementProjects: 0 },
+          ministryData: [],
+          projectTypeData: [],
+          expenseTypeData: []
+        });
+      }
+    };
+
+    if (mode === 'original') {
+      loadData();
+    }
+  }, [mode]);
+
+  // 初期値をlocalStorageから読み込む
+  useEffect(() => {
+    const savedMode = localStorage.getItem('dashboardMode');
+    if (savedMode) {
+      setMode(savedMode);
+    }
+  }, []);
 
   return (
     <Router>
@@ -49,7 +115,13 @@ function App() {
 
         <Layout>
           {mode === 'original' && (
-            <Sidebar />
+            <Sidebar data={dashboardData} filters={{
+              ministries: [], 
+              projectTypes: [''], 
+              expenseTypes: [''], 
+              budgetRange: [0, 50000], 
+              reviewTypes: []
+            }} onFilterChange={() => {}} />
           )}
 
           <Layout style={{ padding: '0 24px 24px' }}>
@@ -63,16 +135,23 @@ function App() {
             >
               {mode === 'original' ? (
                 <Routes>
-                  <Route path="/" element={<OverviewDashboard />} />
-                  <Route path="/performance" element={<PerformanceDashboard />} />
-                  <Route path="/budget" element={<BudgetDashboard />} />
-                  <Route path="/improvement" element={<ImprovementDashboard />} />
+                  <Route path="/" element={<OverviewDashboard data={dashboardData} />} />
+                  <Route path="/rss_dashboard/" element={<OverviewDashboard data={dashboardData} />} />
+                  <Route path="/rss_dashboard" element={<OverviewDashboard data={dashboardData} />} />
+                  <Route path="/performance" element={<PerformanceDashboard data={dashboardData} />} />
+                  <Route path="/rss_dashboard/performance" element={<PerformanceDashboard data={dashboardData} />} />
+                  <Route path="/budget" element={<BudgetDashboard data={dashboardData} />} />
+                  <Route path="/rss_dashboard/budget" element={<BudgetDashboard data={dashboardData} />} />
+                  <Route path="/improvement" element={<ImprovementDashboard data={dashboardData} />} />
+                  <Route path="/rss_dashboard/improvement" element={<ImprovementDashboard data={dashboardData} />} />
                   <Route path="/help" element={<HelpPage />} />
+                  <Route path="/rss_dashboard/help" element={<HelpPage />} />
                 </Routes>
               ) : (
                 <Routes>
-                  <Route path="*" element={<DashboardLayout />} />
                   <Route path="/help" element={<HelpPage />} />
+                  <Route path="/rss_dashboard/help" element={<HelpPage />} />
+                  <Route path="/*" element={<DashboardLayout />} />
                 </Routes>
               )}
             </Content>

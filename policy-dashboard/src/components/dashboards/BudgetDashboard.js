@@ -4,8 +4,8 @@ import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Toolti
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#A28BFF', '#FF6E76', '#4ECDC4', '#FFA577', '#D291BC', '#9D5C63'];
 
-const BudgetDashboard = ({ data }) => {
-  const { contractData, spendingMetrics } = data;
+const BudgetDashboard = ({ data = {} }) => {
+  const { contractData, spendingMetrics } = data || {};
 
   // 支出先テーブルの列定義
   const recipientColumns = [
@@ -118,7 +118,12 @@ const BudgetDashboard = ({ data }) => {
                 ratio={4 / 3}
                 stroke="#fff"
                 content={({ root, depth, x, y, width, height, index, name }) => {
-                  const currentItem = spendingMetrics.typeDistribution[index];
+                  // Add safety check to prevent rendering errors
+                  if (!spendingMetrics?.typeDistribution || !Array.isArray(spendingMetrics.typeDistribution) || index >= spendingMetrics.typeDistribution.length) {
+                    return null;
+                  }
+                  
+                  const currentItem = spendingMetrics.typeDistribution[index] || {};
                   return (
                     <CustomizedTreemapContent
                       root={root}
@@ -128,9 +133,9 @@ const BudgetDashboard = ({ data }) => {
                       width={width}
                       height={height}
                       index={index}
-                      name={currentItem?.type}
-                      value={currentItem?.amount}
-                      percentage={currentItem?.percentage}
+                      name={currentItem?.type || ''}
+                      value={currentItem?.amount || 0}
+                      percentage={currentItem?.percentage || 0}
                     />
                   );
                 }}

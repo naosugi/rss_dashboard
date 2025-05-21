@@ -5,11 +5,20 @@ import { Treemap, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, R
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#A28BFF', '#FF6E76', '#4ECDC4', '#FFA577', '#D291BC', '#9D5C63'];
 
-const OverviewDashboard = ({ data }) => {
-  const { summary, ministryData, projectTypeData, expenseTypeData } = data;
+const OverviewDashboard = ({ data = {} }) => {
+  const { summary, ministryData, projectTypeData, expenseTypeData } = data || {};
 
   // Treemapのカスタムコンテンツ
-  const CustomizedTreemapContent = ({ root, depth, x, y, width, height, index, name, count, percentage }) => {
+  const CustomizedTreemapContent = (props) => {
+    const { root, depth, x, y, width, height, index } = props;
+    // 表示するデータをindexから取得
+    const item = (ministryData && Array.isArray(ministryData) && index < ministryData.length) 
+      ? ministryData[index] 
+      : {};
+    const name = item?.ministry || '';
+    const count = item?.count || 0;
+    const percentage = item?.percentage || 0;
+    
     return (
       <g>
         <rect
@@ -103,20 +112,7 @@ const OverviewDashboard = ({ data }) => {
                 dataKey="count"
                 ratio={4 / 3}
                 stroke="#fff"
-                content={({ root, depth, x, y, width, height, index, name }) => (
-                  <CustomizedTreemapContent
-                    root={root}
-                    depth={depth}
-                    x={x}
-                    y={y}
-                    width={width}
-                    height={height}
-                    index={index}
-                    name={ministryData[index]?.ministry}
-                    count={ministryData[index]?.count}
-                    percentage={ministryData[index]?.percentage}
-                  />
-                )}
+                content={CustomizedTreemapContent}
               />
             </ResponsiveContainer>
           </Card>

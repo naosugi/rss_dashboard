@@ -4,8 +4,8 @@ import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Toolti
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#A28BFF'];
 
-const ImprovementDashboard = ({ data }) => {
-  const { reviewMetrics } = data;
+const ImprovementDashboard = ({ data = {} }) => {
+  const { reviewMetrics } = data || {};
 
   // 評価結果タグのカラー設定
   const getReviewTypeColor = (type) => {

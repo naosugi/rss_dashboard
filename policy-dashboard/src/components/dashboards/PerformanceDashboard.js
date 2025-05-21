@@ -5,8 +5,8 @@ import { ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, CartesianGrid
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#A28BFF'];
 
-const PerformanceDashboard = ({ data }) => {
-  const { performanceMetrics } = data;
+const PerformanceDashboard = ({ data = {} }) => {
+  const { performanceMetrics } = data || {};
 
   // パフォーマンステーブルの列定義
   const performanceColumns = [
